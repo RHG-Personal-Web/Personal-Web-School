@@ -1,1 +1,172 @@
-101 Error: Soon
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <meta http-equiv="refresh" content="60">
+  <meta property="og:site_name" content="RHG#0822">
+  <meta name="title" content="Rusty R. Huskey">
+  <meta name="description" content="Rusty Huskey's School page">
+  <meta name="theme-color" content="#36393f">
+  <meta property="og:image" content="https://cdn.discordapp.com/avatars/140487710727995392/ceb570a26a945cc37931a12e4925f311.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+  <link rel="stylesheet" href="../assets/tether/tether.min.css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="../assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../assets/theme/css/style.css">
+  <link rel="stylesheet" href="../assets/mobirise/css/mbr-additional.css" type="text/css">
+    
+</head>
+<body>
+   <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(../assets/images/adult-alone-blur-1172207.jpg);">
+    <!-- <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: <span id="background">url(../assets/images/adult-alone-blur-1172207.jpg)</span>;"> -->
+    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
+        
+    <div class="mbr-table-cell">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+
+                    <h1 class="mbr-section-title display-1"><span id="timeprefix">Good</span> <span id="time"></span>, <span id="username">Rusty</span></h1>
+                    <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
+                   <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
+                   <!--  <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p> -->
+                    <p class="mbr-section-lead lead"><span id="quote"></span></p>
+                    <div class="mbr-section-btn">
+                      <!-- <a class="btn btn-lg btn-success" href="https://rustyrhuskey.tk/profile">Profile</a> -->
+                      <a class="btn btn-lg btn-white btn-white-outline" href="http://www.na.sevier.org/">Homepage</a>
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://classroom.google.com">Classrooms</a>
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://sis-sevier.tnk12.gov/scripts/wsisa.dll/WService=wsSEVStu/sfemnu01.w">Skyward</a> 
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://www.khanacademy.org/">Khan Academy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</section>
+    
+  <script src="../assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="../assets/tether/tether.min.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="../assets/jarallax/jarallax.js"></script>
+  <script src="../assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="../assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>
+
+<!-- <script>
+    var quote = quotes[Math.floor((Math.random() * quotes.length))]
+    
+    document.querySelector('mbr-section-lead lead') = quote;
+</script> -->
+
+<script>
+var params = {},
+pairs = document.URL.split('?')
+    .pop()
+    .split('&');
+
+for (var i = 0, p; i < pairs.length; i++) {
+    p = pairs[i].split('=');
+    params[ p[0] ] =  decodeURIComponent(p[1]);
+} 
+var MorningImg = [
+    "https://picsum.photos/1600/900/?image=412",
+    "https://picsum.photos/1600/900/?image=331",
+    "https://picsum.photos/1600/900/?image=337",
+    "https://picsum.photos/1600/900/?image=368"
+];
+  
+var AfternoonImg = [
+    "https://picsum.photos/1600/900/?image=297",
+    "https://picsum.photos/1600/900/?image=983",
+    "https://picsum.photos/1600/900/?image=944",
+    "https://picsum.photos/1600/900/?image=668",
+    "https://picsum.photos/1600/900/?image=29",
+    "https://picsum.photos/1600/900/?image=760"
+];
+    
+var EveningImg = [
+    "../assets/images/adult-alone-blur-1172207.jpg",
+    "https://picsum.photos/1600/900/?image=556",
+    "https://picsum.photos/1600/900/?image=391"
+];
+
+if (params.name && params.name != "") {
+    document.getElementById("username").innerHTML = params.name
+}
+if (params.prefix) {
+    document.getElementById("timeprefix").innerHTML = params.prefix
+} else if (params.prefix == "") {
+    document.getElementById("timeprefix").innerHTML = ""
+}
+    
+if (!params.quote || params.quote == "") {
+  fetch("https://talaikis.com/api/quotes/random/")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
+    })
+    .catch(function () {
+      console.log("An error occurred");
+    });
+} else {
+    document.getElementById("quote").innerHTML = params.quote
+}
+    
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+    
+var today = new Date()
+var curHr = today.getHours()
+var timetype = null;
+
+if (curHr < 12) {
+  timetype = "AM";
+} else {
+  timetype = "PM";
+}
+if (today.getMinutes() < 10 ) {
+    document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":0" + today.getMinutes() + " " + timetype
+} else {
+    document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
+}  
+if (curHr < 12) {
+  document.getElementById("time").innerHTML = "Morning";
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+} else if (curHr < 18) {
+  document.getElementById("time").innerHTML = "Afternoon";
+  // document.getElementById("background").innerHTML = "url(" + AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))] + ")"
+} else if (curHr < 22){
+  document.getElementById("time").innerHTML = "Evening"
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+} else {
+  document.getElementById("time").innerHTML = "Night"
+  // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
+}
+  
+var loc = window.location.href+'';
+if (loc.indexOf('http://')==0){
+    window.location.href = loc.replace('http://','https://');
+}
+</script>
