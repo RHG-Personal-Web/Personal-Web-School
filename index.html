@@ -174,15 +174,22 @@ var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
 }
-msg = " Good " + timGood + (params.name ? params.name : "Rusty");
+msg = " Good " + timGood + " " + (params.name ? params.name : "Rusty");
 msg2 = timeGood
 position = 0;
 
+//function scrolltitle() {
+  //document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+  //position++;
+  //if (position > msg.length) position = 0
+  //window.setTimeout("scrolltitle()", 500);
+//}
 function scrolltitle() {
-  document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+  if (position = 1) document.title = msg;
+  if (position = 2) document.title = msg2;
   position++;
-  if (position > msg.length) position = 0
-  window.setTimeout("scrolltitle()", 500);
+  if (position == 2) position = 0
+  window.setTimeout("scrolltitle()", 200);
 }
 scrolltitle();
 </script>
