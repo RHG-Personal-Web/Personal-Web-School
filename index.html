@@ -174,8 +174,8 @@ var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
 }
-msg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
-msg2 = timeGood
+var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
+var titlemsg2 = timeGood
 position = 0;
 
 //function scrolltitle() {
@@ -186,8 +186,8 @@ position = 0;
 //}
 function scrolltitle() {
   position++;
-  if (position = 1) document.title = msg;
-  if (position = 2) document.title = msg2;
+  if (position == 1) document.title = titlemsg;
+  if (position == 2) document.title = titlemsg2;
   if (position == 2) position = 1
   window.setTimeout("scrolltitle()", 290);
 }
