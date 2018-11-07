@@ -185,10 +185,10 @@ position = 0;
   //window.setTimeout("scrolltitle()", 500);
 //}
 function scrolltitle() {
+  position++;
   if (position = 1) document.title = msg;
   if (position = 2) document.title = msg2;
-  position++;
-  if (position == 2) position = 0
+  if (position == 2) position = 1
   window.setTimeout("scrolltitle()", 5000);
 }
 scrolltitle();
