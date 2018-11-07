@@ -15,7 +15,7 @@
   <meta property="og:image:width" content="256">
   <meta property="og:image:height" content="256">
   
-  <title>Welcome</title>
+  <!-- <title>Welcome</title> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
@@ -174,7 +174,8 @@ var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
 }
-msg = " Good " + timGood + params.name ? params.name : "Rusty";
+msg = " Good " + timGood + (params.name ? params.name : "Rusty");
+msg2 = timeGood
 position = 0;
 
 function scrolltitle() {
