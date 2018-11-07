@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   
-  <!-- <meta http-equiv="refresh" content="60"> -->
+  <meta http-equiv="refresh" content="60">
   <meta property="og:site_name" content="RHG#0822">
   <meta name="title" content="Rusty R. Huskey">
   <meta name="description" content="Rusty Huskey's School page">
@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
-                    <h1 class="mbr-section-title display-1"><font class="unselectable"><span id="timeprefix">Good</span> <span id="time"></span>, <span id="username">Rusty</span></font></h1>
+                    <h1 class="mbr-section-title display-1"><font class="unselectable"><span id="timeprefix">Good</span> <span id="time"></span>   <span id="username"></span></font></h1>
                     <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
                     <p class="mbr-section-lead lead"><span id="quote"></span></p>
                     <div class="mbr-section-btn">
@@ -107,16 +107,43 @@ var EveningImg = [
     "https://picsum.photos/1600/900/?image=556",
     "https://picsum.photos/1600/900/?image=391"
 ];
-
-if (params.name && params.name != "") {
-    document.getElementById("username").innerHTML = params.name
-}
+var entirenameLine = ''
 if (params.prefix) {
-    document.getElementById("timeprefix").innerHTML = params.prefix
+    //document.getElementById("timeprefix").innerHTML = params.prefix
+    entirenameLine += params.prefix + " "
 } else if (params.prefix == "") {
-    document.getElementById("timeprefix").innerHTML = ""
+    entirenameLine += ''
+} else {
+  entirenameLine += 'Good '
 }
-function refreshPageStuff() {    
+var curHr1 = new Date().getHours()
+  if (curHr1 < 12) {
+  entirenameLine += "Morning, ";
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+} else if (curHr1 < 19) {
+  entirenameLine +="Afternoon, ";
+  // document.getElementById("background").innerHTML = "url(" + AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))] + ")"
+} else if (curHr1 < 22){
+  entirenameLine +="Evening, "
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+} else {
+  entirenameLine +="Night, "
+  // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
+}
+if (params.name && params.name != "") {
+    //document.getElementById("username").innerHTML = params.name
+  entirenameLine += params.name + " "
+} else {
+entirenameLine += "Rusty"
+}
+var x = 0;
+var Interval = setInterval(function() {
+document.getElementById("timeprefix").innerHTML = entirenameLine.substring(0, x+1)
+if (++x === entirenameLine.length) {
+window.clearInterval(Interval);
+}
+}, 9000 / entirenameLine.length);
+  
 if (!params.quote || params.quote == "") {
   fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
@@ -131,7 +158,8 @@ if (!params.quote || params.quote == "") {
 } else {
     document.getElementById("quote").innerHTML = params.quote
 }
-    
+
+//function refreshPageStuff() { 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
     
@@ -153,29 +181,30 @@ if (today.getMinutes() < 10 ) {
     timeGood = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
     document.getElementById("curtime").innerHTML = timeGood
 }  
-if (curHr < 12) {
-  document.getElementById("time").innerHTML = "Morning";
+//if (curHr < 12) {
+  //document.getElementById("time").innerHTML = "Morning";
   // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
-} else if (curHr < 18) {
-  document.getElementById("time").innerHTML = "Afternoon";
+//} else if (curHr < 19) {
+  //document.getElementById("time").innerHTML = "Afternoon";
   // document.getElementById("background").innerHTML = "url(" + AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))] + ")"
-} else if (curHr < 22){
-  document.getElementById("time").innerHTML = "Evening"
+//} else if (curHr < 22){
+  //document.getElementById("time").innerHTML = "Evening"
   // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
-} else {
-  document.getElementById("time").innerHTML = "Night"
+//} else {
+  //document.getElementById("time").innerHTML = "Night"
   // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
-}
+//}
 timGood = document.getElementById("time").innerHTML
   
 var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
 }
-window.setTimeout("refreshPageStuff()", 5000);
-}
-refreshPageStuff()
-var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
+//window.setTimeout("refreshPageStuff()", 10000);
+//}
+//refreshPageStuff()
+//var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
+var titlemsg = entirenameLine
 var titlemsg2 = timeGood
 var msg = 1;
 var done = false;
@@ -188,18 +217,26 @@ var done = false;
 //}
 function scrolltitle() {
   if (msg == 1) {
-    for (pos = 0; pos < titlemsg.length; pos++) { 
-     window.setTimeout(function(){ document.title = titlemsg.substring(0, pos) }, pos*1000);
-    }
+    var x = 0;
+        var Interval = setInterval(function() {
+            document.title = titlemsg.substring(0, x+1)
+            if (++x === titlemsg.length) {
+                window.clearInterval(Interval);
+            }
+        }, 3000 / titlemsg.length);
   }
   if (msg == 2) {
-    for (pos = 0; pos < titlemsg2.length; pos++) { 
-     window.setTimeout(function(){ document.title = titlemsg2.substring(0, pos) }, pos*1000);
-    }
+        var x = 0;
+        var Interval = setInterval(function() {
+            document.title = titlemsg2.substring(0, x+1)
+            if (++x === titlemsg2.length) {
+                window.clearInterval(Interval);
+            }
+        }, 3000 / titlemsg2.length);
   }
   msg++;
-  if (msg > 2) position = 1
-  window.setTimeout("scrolltitle()", 15000);
+  if (msg > 2) msg = 1
+  window.setTimeout("scrolltitle()", 7000);
 }
 scrolltitle();
 </script>
