@@ -142,22 +142,31 @@ document.getElementById("timeprefix").innerHTML = entirenameLine.substring(0, x+
 if (++x === entirenameLine.length) {
 window.clearInterval(Interval);
 }
-}, 9000 / entirenameLine.length);
-  
+}, 5000 / entirenameLine.length);
+let fullQuote = ""
 if (!params.quote || params.quote == "") {
   fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
+      //document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
+    fullQuote = "\"" + data.quote + "\" - " + data.author
     })
     .catch(function () {
       console.log("An error occurred");
     });
 } else {
-    document.getElementById("quote").innerHTML = params.quote
+    //document.getElementById("quote").innerHTML = params.quote
+  fullQuote = params.quote
 }
+var x = 0;
+var Interval = setInterval(function() {
+document.getElementById("quote").innerHTML = fullQuote.substring(0, x+1)
+if (++x === fullQuote.length) {
+window.clearInterval(Interval);
+}
+}, 3000 / fullQuote.length);
 
 //function refreshPageStuff() { 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
