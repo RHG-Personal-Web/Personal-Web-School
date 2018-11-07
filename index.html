@@ -140,6 +140,8 @@ var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"
 var today = new Date()
 var curHr = today.getHours()
 var timetype = null;
+var timGood = "";
+var timeGood = ""
 
 if (curHr < 12) {
   timetype = "AM";
@@ -147,9 +149,11 @@ if (curHr < 12) {
   timetype = "PM";
 }
 if (today.getMinutes() < 10 ) {
-    document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":0" + today.getMinutes() + " " + timetype
+    timeGood = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":0" + today.getMinutes() + " " + timetype
+    document.getElementById("curtime").innerHTML = timeGood
 } else {
-    document.getElementById("curtime").innerHTML = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
+    timeGood = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
+    document.getElementById("curtime").innerHTML = timeGood
 }  
 if (curHr < 12) {
   document.getElementById("time").innerHTML = "Morning";
@@ -164,9 +168,20 @@ if (curHr < 12) {
   document.getElementById("time").innerHTML = "Night"
   // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
 }
+timGood = document.getElementById("time").innerHTML
   
 var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
 }
+msg = " Good " + timGood + params.name ? params.name : "Rusty";
+position = 0;
+
+function scrolltitle() {
+  document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+  position++;
+  if (position > msg.length) position = 0
+  window.setTimeout("scrolltitle()", 500);
+}
+scrolltitle();
 </script>
