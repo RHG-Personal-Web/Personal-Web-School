@@ -142,7 +142,7 @@ document.getElementById("timeprefix").innerHTML = entirenameLine.substring(0, x+
 if (++x === entirenameLine.length) {
 window.clearInterval(Interval);
 }
-}, 5000 / entirenameLine.length);
+}, 4000 / entirenameLine.length);
 let fullQuote = ""
 if (!params.quote || params.quote == "") {
   fetch("https://talaikis.com/api/quotes/random/")
@@ -166,7 +166,7 @@ document.getElementById("quote").innerHTML = fullQuote.substring(0, x+1)
 if (++x === fullQuote.length) {
 window.clearInterval(Interval);
 }
-}, 3000 / fullQuote.length);
+}, 6000 / fullQuote.length);
 
 //function refreshPageStuff() { 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -225,6 +225,14 @@ var done = false;
   //window.setTimeout("scrolltitle()", 500);
 //}
 function scrolltitle() {
+        var docTitle = document.title
+        var x = docTitle.length;
+        var Interval = setInterval(function() {
+            document.title = docTitle.substring(0, x)
+            if (--x === 0) {
+                window.clearInterval(Interval);
+            }
+        }, 1000 / docTitle.length);
   if (msg == 1) {
     var x = 0;
         var Interval = setInterval(function() {
@@ -232,7 +240,7 @@ function scrolltitle() {
             if (++x === titlemsg.length) {
                 window.clearInterval(Interval);
             }
-        }, 3000 / titlemsg.length);
+        }, 1000 / titlemsg.length);
   }
   if (msg == 2) {
         var x = 0;
@@ -241,7 +249,7 @@ function scrolltitle() {
             if (++x === titlemsg2.length) {
                 window.clearInterval(Interval);
             }
-        }, 3000 / titlemsg2.length);
+        }, 1000 / titlemsg2.length);
   }
   msg++;
   if (msg > 2) msg = 1
