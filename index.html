@@ -188,7 +188,7 @@ var done = false;
 function scrolltitle() {
   if (msg == 1) {
     for (i = 0; i < titlemsg.length; i++) { 
-     setTimeout(function(){ document.title = titlemsg.substring(0, i) }, i*1000);
+     window.setTimeout(function(){ document.title = titlemsg.substring(0, i) }, i*1000);
     }
   }
   if (msg == 2) document.title = titlemsg2;
