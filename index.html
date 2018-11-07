@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   
-  <meta http-equiv="refresh" content="60">
+  <!-- <meta http-equiv="refresh" content="60"> -->
   <meta property="og:site_name" content="RHG#0822">
   <meta name="title" content="Rusty R. Huskey">
   <meta name="description" content="Rusty Huskey's School page">
@@ -38,10 +38,8 @@
             <div class="row">
                 <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
 
-                    <h1 class="mbr-section-title display-1"><span id="timeprefix">Good</span> <span id="time"></span>, <span id="username">Rusty</span></h1>
+                    <h1 class="mbr-section-title display-1"><font class="unselectable"><span id="timeprefix">Good</span> <span id="time"></span>, <span id="username">Rusty</span></font></h1>
                     <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
-                   <!-- <p class="mbr-section-lead lead">"Either I will find a way, or I will make one." - Philip Sydney</p> -->
-                   <!--  <p class="mbr-section-lead lead">"<span id="quote"></span>" - Donald Trump</p> -->
                     <p class="mbr-section-lead lead"><span id="quote"></span></p>
                     <div class="mbr-section-btn">
                       <!-- <a class="btn btn-lg btn-success" href="https://rustyrhuskey.tk/profile">Profile</a> -->
@@ -118,7 +116,7 @@ if (params.prefix) {
 } else if (params.prefix == "") {
     document.getElementById("timeprefix").innerHTML = ""
 }
-    
+function refreshPageStuff() {    
 if (!params.quote || params.quote == "") {
   fetch("https://talaikis.com/api/quotes/random/")
     .then(function (response) {
@@ -174,6 +172,9 @@ var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
 }
+window.setTimeout("refreshPageStuff()", 5000);
+}
+refreshPageStuff()
 var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
 var titlemsg2 = timeGood
 var msg = 1;
@@ -187,14 +188,18 @@ var done = false;
 //}
 function scrolltitle() {
   if (msg == 1) {
-    for (i = 0; i < titlemsg.length; i++) { 
-     window.setTimeout(function(){ document.title = titlemsg.substring(0, i) }, i*1000);
+    for (pos = 0; pos < titlemsg.length; pos++) { 
+     window.setTimeout(function(){ document.title = titlemsg.substring(0, pos) }, pos*1000);
     }
   }
-  if (msg == 2) document.title = titlemsg2;
+  if (msg == 2) {
+    for (pos = 0; pos < titlemsg2.length; pos++) { 
+     window.setTimeout(function(){ document.title = titlemsg2.substring(0, pos) }, pos*1000);
+    }
+  }
   msg++;
   if (msg > 2) position = 1
-  window.setTimeout("scrolltitle()", 10000);
+  window.setTimeout("scrolltitle()", 15000);
 }
 scrolltitle();
 </script>
