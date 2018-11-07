@@ -176,7 +176,7 @@ if (loc.indexOf('http://')==0){
 }
 var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
 var titlemsg2 = timeGood
-position = 0;
+position = 1;
 
 //function scrolltitle() {
   //document.title = msg.substring(position, msg.length) + msg.substring(0, position);
@@ -185,11 +185,11 @@ position = 0;
   //window.setTimeout("scrolltitle()", 500);
 //}
 function scrolltitle() {
-  position++;
   if (position == 1) document.title = titlemsg;
   if (position == 2) document.title = titlemsg2;
-  if (position == 2) position = 1
-  window.setTimeout("scrolltitle()", 230);
+  position++;
+  if (position > 2) position = 1
+  window.setTimeout("scrolltitle()", 190);
 }
 scrolltitle();
 </script>
