@@ -217,11 +217,14 @@ if (loc.indexOf('http://')==0){
 var titlemsg = entirenameLine
 var titlemsg2 = timeGood
 var titlemsg3 = "Thanks for visiting!"
-var titleMessages = [
+var titleMessages;
+setInterval(function() {
+titleMessages = [
   entirenameLine,
   timeGood,
   "Thanks for visiting!"
   ]
+}, 1000);
 var msgNum = 0;
 
 //function scrolltitle() {
