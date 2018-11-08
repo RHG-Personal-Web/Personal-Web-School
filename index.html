@@ -217,9 +217,9 @@ var titlemsg = entirenameLine
 var titlemsg2 = timeGood
 var titlemsg3 = "Thanks for visiting!"
 var titleMessages = [
-  { text: entirenameLine },
-  { text: timeGood },
-  { text: "Thanks for visiting!" },
+  { entirenameLine },
+  { timeGood },
+  { "Thanks for visiting!"},
   ]
 var msg = 1;
 var done = false;
@@ -242,11 +242,11 @@ setInterval(function() {
   window.setTimeout(function() {
     var x = 0;
     var Interval = setInterval(function() {
-    document.title = titleMessages[msg].text.substring(0, x+1)
-      if (++x === titleMessages[msg].text.length) {
+    document.title = titleMessages[msg].substring(0, x+1)
+      if (++x === titleMessages[msg].length) {
          window.clearInterval(Interval);
       }
-    }, 2000 / titleMessages[msg].text.length);
+    }, 2000 / titleMessages[msg].length);
     msg++;
     if (msg > titleMessages.length) msg = 1
   }, 1000)
