@@ -219,10 +219,9 @@ var titlemsg3 = "Thanks for visiting!"
 var titleMessages = [
   entirenameLine,
   timeGood,
-  "Thanks for visiting!",
+  "Thanks for visiting!"
   ]
-var msg = 1;
-var done = false;
+var msgNum = 0;
 
 //function scrolltitle() {
   //document.title = msg.substring(position, msg.length) + msg.substring(0, position);
@@ -238,17 +237,17 @@ setInterval(function() {
             if (--x === 0) {
                 window.clearInterval(ClearInterval);
             }
-        }, 1000 / docTitle.length);
+        }, 2000 / docTitle.length);
   window.setTimeout(function() {
     var x = 0;
-    var Interval = setInterval(function() {
-    document.title = titleMessages[msg].substring(0, x+1)
-      if (++x === titleMessages[msg].length) {
-         window.clearInterval(Interval);
+    var SetInterval = setInterval(function() {
+    document.title = titleMessages[msgNum].substring(0, x+1)
+      if (++x === titleMessages[msgNum].length) {
+         window.clearInterval(SetInterval);
       }
-    }, 2000 / titleMessages[msg].length);
-    msg++;
-    if (msg > titleMessages.length) msg = 1
+    }, 2000 / titleMessages[msgNum].length);
+    msgNum++;
+    if (msgNum > titleMessages.length) msgNum = 1
   }, 1000)
 }, 7000);
 </script>
