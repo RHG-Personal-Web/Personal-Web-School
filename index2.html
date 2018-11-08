@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<style>
+   #particles-js{ position:absolute; width: 100%; height: 100%; background-color: transparent; background-repeat: no-repeat; background-size: auto; background-position: 50% 50%; } 
+</style>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <!-- <meta http-equiv="refresh" content="60"> -->
+  <meta property="og:site_name" content="RHG#0822">
+  <meta name="title" content="Rusty R. Huskey">
+  <meta name="description" content="Rusty Huskey's School page">
+  <meta name="theme-color" content="#36393f">
+  <meta property="og:image" content="https://cdn.discordapp.com/avatars/140487710727995392/ceb570a26a945cc37931a12e4925f311.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="256">
+  <meta property="og:image:height" content="256">
+  
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    
+</head>
+<body>
+   <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(assets/images/adult-alone-blur-1172207.jpg);">
+    <!-- <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: <span id="background">url(assets/images/adult-alone-blur-1172207.jpg)</span>;"> -->
+    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <div class="mbr-table-cell">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+
+                    <h1 class="mbr-section-title display-1"><font class="unselectable"><span id="timeprefix"></span> <span id="time"></span>   <span id="username"></span></font></h1>
+                    <h5 class="mbr-section-title display-5">It is <span id="curtime"></span></h5>
+                    <p class="mbr-section-lead lead"><span id="quote"></span></p>
+                    <div class="mbr-section-btn">
+                      <!-- <a class="btn btn-lg btn-success" href="https://rustyrhuskey.tk/profile">Profile</a> -->
+                      <!-- <a class="btn btn-lg btn-white btn-white-outline" href="http://www.na.sevier.org/">Homepage</a>
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://classroom.google.com">Classrooms</a>
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://sis-sevier.tnk12.gov/scripts/wsisa.dll/WService=wsSEVStu/sfemnu01.w">Skyward</a> 
+                      <a class="btn btn-lg btn-white btn-white-outline" href="https://www.khanacademy.org/">Khan Academy</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</section>
+    
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/jarallax/jarallax.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>
+
+<!-- <script>
+    var quote = quotes[Math.floor((Math.random() * quotes.length))]
+    
+    document.querySelector('mbr-section-lead lead') = quote;
+</script> -->
+
+<script>
+var params = {},
+pairs = document.URL.split('?')
+    .pop()
+    .split('&');
+
+for (var i = 0, p; i < pairs.length; i++) {
+    p = pairs[i].split('=');
+    params[ p[0] ] =  decodeURIComponent(p[1]);
+} 
+var MorningImg = [
+    "https://picsum.photos/1600/900/?image=412",
+    "https://picsum.photos/1600/900/?image=331",
+    "https://picsum.photos/1600/900/?image=337",
+    "https://picsum.photos/1600/900/?image=368"
+];
+  
+var AfternoonImg = [
+    "https://picsum.photos/1600/900/?image=297",
+    "https://picsum.photos/1600/900/?image=983",
+    "https://picsum.photos/1600/900/?image=944",
+    "https://picsum.photos/1600/900/?image=668",
+    "https://picsum.photos/1600/900/?image=29",
+    "https://picsum.photos/1600/900/?image=760"
+];
+    
+var EveningImg = [
+    "../assets/images/adult-alone-blur-1172207.jpg",
+    "https://picsum.photos/1600/900/?image=556",
+    "https://picsum.photos/1600/900/?image=391"
+];
+var entirenameLine = ''
+if (params.prefix) {
+    //document.getElementById("timeprefix").innerHTML = params.prefix
+    entirenameLine += params.prefix + " "
+} else if (params.prefix == "") {
+    entirenameLine += ''
+} else {
+  entirenameLine += 'Good '
+}
+var curHr1 = new Date().getHours()
+  if (curHr1 < 12) {
+  entirenameLine += "Morning, ";
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+} else if (curHr1 < 19) {
+  entirenameLine +="Afternoon, ";
+  // document.getElementById("background").innerHTML = "url(" + AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))] + ")"
+} else if (curHr1 < 22){
+  entirenameLine +="Evening, "
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+} else {
+  entirenameLine +="Night, "
+  // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
+}
+if (params.name && params.name != "") {
+    //document.getElementById("username").innerHTML = params.name
+  entirenameLine += params.name + " "
+} else {
+entirenameLine += "Rusty"
+}
+var x = 0;
+var Interval = setInterval(function() {
+document.getElementById("timeprefix").innerHTML = entirenameLine.substring(0, x+1)
+if (++x === entirenameLine.length) {
+window.clearInterval(Interval);
+}
+}, 7000 / entirenameLine.length);
+let fullQuote = ""
+if (!params.quote || params.quote == "") {
+  fetch("https://talaikis.com/api/quotes/random/")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      //document.getElementById("quote").innerHTML = "\"" + data.quote + "\" - " + data.author
+    fullQuote = "\"" + data.quote + "\" - " + data.author
+    })
+    .catch(function () {
+      console.log("An error occurred");
+    });
+} else {
+    //document.getElementById("quote").innerHTML = params.quote
+  fullQuote = params.quote
+}
+var x = 0;
+var Interval = setInterval(function() {
+document.getElementById("quote").innerHTML = fullQuote.substring(0, x+1)
+if (++x === fullQuote.length) {
+window.clearInterval(Interval);
+}
+}, 8000 / fullQuote.length);
+
+//function refreshPageStuff() { 
+var timeGood = "y"
+setInterval(function() {
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+    
+var today = new Date()
+var curHr = today.getHours()
+var timetype = null;
+var timGood = "";
+
+if (curHr < 12) {
+  timetype = "AM";
+} else {
+  timetype = "PM";
+}
+if (today.getMinutes() < 10 ) {
+    timeGood = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":0" + today.getMinutes() + " " + timetype
+    document.getElementById("curtime").innerHTML = timeGood
+} else {
+    timeGood = months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear() + " " + hours[today.getHours()] + ":" + today.getMinutes() + " " + timetype
+    document.getElementById("curtime").innerHTML = timeGood
+}  
+//if (curHr < 12) {
+  //document.getElementById("time").innerHTML = "Morning";
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+//} else if (curHr < 19) {
+  //document.getElementById("time").innerHTML = "Afternoon";
+  // document.getElementById("background").innerHTML = "url(" + AfternoonImg[Math.floor((Math.random() * AfternoonImg.length))] + ")"
+//} else if (curHr < 22){
+  //document.getElementById("time").innerHTML = "Evening"
+  // document.getElementById("background").innerHTML = "url(" + MorningImg[Math.floor((Math.random() * MorningImg.length))] + ")"
+//} else {
+  //document.getElementById("time").innerHTML = "Night"
+  // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
+//}
+timGood = document.getElementById("time").innerHTML
+}, 1000);
+var loc = window.location.href+'';
+if (loc.indexOf('http://')==0){
+    window.location.href = loc.replace('http://','https://');
+}
+//window.setTimeout("refreshPageStuff()", 10000);
+//}
+//refreshPageStuff()
+//var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
+var titleMessages;
+setInterval(function() {
+titleMessages = [
+  entirenameLine + "!",
+  timeGood,
+  "Thanks for visiting!",
+  "rustyrhuskey.tk"
+  ]
+}, 14000);
+var msgNum = 0;
+
+//function scrolltitle() {
+  //document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+  //position++;
+  //if (position > msg.length) position = 0
+  //window.setTimeout("scrolltitle()", 500);
+//}
+setInterval(function() {
+        var docTitle = document.title
+        var x = docTitle.length;
+        var ClearInterval = setInterval(function() {
+            document.title = docTitle.substring(0, x+1)
+            if (--x === 0) {
+                window.clearInterval(ClearInterval);
+            }
+        }, 1500 / docTitle.length);
+  window.setTimeout(function() {
+    var x = 0;
+    var SetInterval = setInterval(function() {
+    document.title = titleMessages[msgNum].substring(0, x+1)
+      if (++x === titleMessages[msgNum].length) {
+         window.clearInterval(SetInterval);
+      }
+    }, 1500 / titleMessages[msgNum].length);
+    msgNum++;
+    if (msgNum == titleMessages.length) msgNum = 0
+    console.log(msgNum, titleMessages.length);
+  }, 1500)
+}, 15000);
+</script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 90,
+      "density": {
+        "enable": true,
+        "value_area": 1800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 185,
+      "color": "#698cff",
+      "opacity": 0.56,
+      "width": 0.75
+    },
+    "move": {
+      "enable": true,
+      "speed": 4.5,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 77,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 125,
+        "duration": 5
+      },
+      "push": {
+        "particles_nb": 2
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
