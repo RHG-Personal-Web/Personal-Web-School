@@ -33,8 +33,7 @@
 <body>
    <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: url(assets/images/adult-alone-blur-1172207.jpg);">
     <!-- <div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background" id="header1-a" data-rv-view="2" style="background-image: <span id="background">url(assets/images/adult-alone-blur-1172207.jpg)</span>;"> -->
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
-    <div id="particles-js"></div>
+    <div id="particles-js" class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
       
     <div class="mbr-table-cell">
@@ -74,12 +73,118 @@
   </body>
 </html>
 
-<!-- <script>
-    var quote = quotes[Math.floor((Math.random() * quotes.length))]
-    
-    document.querySelector('mbr-section-lead lead') = quote;
-</script> -->
-
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 90,
+      "density": {
+        "enable": true,
+        "value_area": 1800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 185,
+      "color": "#EEEEEE",
+      "opacity": 0.56,
+      "width": 0.75
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": true,
+      "straight": true,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 77,
+        "line_linked": {
+          "opacity": 0.56
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 125,
+        "duration": 5
+      },
+      "push": {
+        "particles_nb": 2
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": false
+});
+</script>
 <script>
 var params = {},
 pairs = document.URL.split('?')
@@ -257,116 +362,4 @@ setInterval(function() {
     console.log(msgNum, titleMessages.length);
   }, 1500)
 }, 15000);
-</script>
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 90,
-      "density": {
-        "enable": true,
-        "value_area": 1800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 1,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 185,
-      "color": "#698cff",
-      "opacity": 0.56,
-      "width": 0.75
-    },
-    "move": {
-      "enable": true,
-      "speed": 4.5,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 77,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 125,
-        "duration": 5
-      },
-      "push": {
-        "particles_nb": 2
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
 </script>
