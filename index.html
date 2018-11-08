@@ -228,12 +228,13 @@ var done = false;
 function scrolltitle() {
         var docTitle = document.title
         var x = docTitle.length;
-        var Interval = setInterval(function() {
-            document.title = docTitle.substring(0, x)
-            if (--x === 1) {
-                window.clearInterval(Interval);
+        var ClearInterval = setInterval(function() {
+            document.title = docTitle.substring(0, x+1)
+            if (--x === 0) {
+                window.clearInterval(ClearInterval);
             }
         }, 1000 / docTitle.length);
+  window.setTimeout(function() {
   if (msg == 1) {
     var x = 0;
         var Interval = setInterval(function() {
@@ -264,6 +265,7 @@ function scrolltitle() {
   msg++;
   if (msg > 3) msg = 1
   window.setTimeout("scrolltitle()", 7000);
+  }, 1000)
 }
 scrolltitle();
 </script>
