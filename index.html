@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   
-  <meta http-equiv="refresh" content="60">
+  <!-- <meta http-equiv="refresh" content="60"> -->
   <meta property="og:site_name" content="RHG#0822">
   <meta name="title" content="Rusty R. Huskey">
   <meta name="description" content="Rusty Huskey's School page">
@@ -169,6 +169,7 @@ window.clearInterval(Interval);
 }, 6000 / fullQuote.length);
 
 //function refreshPageStuff() { 
+setInterval(function() {
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var hours = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
     
@@ -204,7 +205,7 @@ if (today.getMinutes() < 10 ) {
   // document.getElementById("background").innerHTML = "url(" + EveningImg[Math.floor((Math.random() * EveningImg.length))] + ")"
 //}
 timGood = document.getElementById("time").innerHTML
-  
+}, 1000);
 var loc = window.location.href+'';
 if (loc.indexOf('http://')==0){
     window.location.href = loc.replace('http://','https://');
@@ -248,8 +249,7 @@ setInterval(function() {
     }, 2000 / titleMessages[msgNum].length);
     msgNum++;
     if (msgNum == titleMessages.length) msgNum = 0
-    console.log(msgNum);
-    console.log(titleMessages.length);
+    console.log(msgNum, titleMessages.length);
   }, 2300)
 }, 15000);
 </script>
