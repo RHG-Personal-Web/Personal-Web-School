@@ -142,7 +142,7 @@ document.getElementById("timeprefix").innerHTML = entirenameLine.substring(0, x+
 if (++x === entirenameLine.length) {
 window.clearInterval(Interval);
 }
-}, 5000 / entirenameLine.length);
+}, 7000 / entirenameLine.length);
 let fullQuote = ""
 if (!params.quote || params.quote == "") {
   fetch("https://talaikis.com/api/quotes/random/")
@@ -166,7 +166,7 @@ document.getElementById("quote").innerHTML = fullQuote.substring(0, x+1)
 if (++x === fullQuote.length) {
 window.clearInterval(Interval);
 }
-}, 6000 / fullQuote.length);
+}, 8000 / fullQuote.length);
 
 //function refreshPageStuff() { 
 var timeGood = "y"
@@ -214,9 +214,6 @@ if (loc.indexOf('http://')==0){
 //}
 //refreshPageStuff()
 //var titlemsg = " Good " + timGood + ", " + (params.name ? params.name : "Rusty");
-var titlemsg = entirenameLine
-var titlemsg2 = timeGood
-var titlemsg3 = "Thanks for visiting!"
 var titleMessages;
 setInterval(function() {
 titleMessages = [
@@ -225,7 +222,7 @@ titleMessages = [
   "Thanks for visiting!",
   "rustyrhuskey.tk"
   ]
-}, 1000);
+}, 14000);
 var msgNum = 0;
 
 //function scrolltitle() {
@@ -242,7 +239,7 @@ setInterval(function() {
             if (--x === 0) {
                 window.clearInterval(ClearInterval);
             }
-        }, 2000 / docTitle.length);
+        }, 1500 / docTitle.length);
   window.setTimeout(function() {
     var x = 0;
     var SetInterval = setInterval(function() {
@@ -250,10 +247,10 @@ setInterval(function() {
       if (++x === titleMessages[msgNum].length) {
          window.clearInterval(SetInterval);
       }
-    }, 2000 / titleMessages[msgNum].length);
+    }, 1500 / titleMessages[msgNum].length);
     msgNum++;
     if (msgNum == titleMessages.length) msgNum = 0
     console.log(msgNum, titleMessages.length);
-  }, 2300)
+  }, 1500)
 }, 15000);
 </script>
